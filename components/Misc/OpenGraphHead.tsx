@@ -8,10 +8,13 @@ const OpenGraphHead = () => (
     <meta property="og:url" content="" />
     <meta
       property="og:description"
-      content="Ohh you found me?. Awesome! I am Yusuf Kehinde Hussein. Or you could call me Urek. That works too . . . I am a Frontend Developer"
+      content="Ohh you found me?. Awesome! I am Yusuf Kehinde Hussein. Or you could call me Kenny. That works too . . . I am a Frontend Developer"
     />
     <meta property="og:type" content="profile" />
-    <meta property="og:image" content=""></meta>
+    <meta
+      property="og:image"
+      content="https://yusufkehinde.netlify.app/ogimage.png"
+    ></meta>
   </Head>
 )
 export default OpenGraphHead
