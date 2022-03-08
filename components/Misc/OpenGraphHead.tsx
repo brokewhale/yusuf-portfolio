@@ -5,7 +5,7 @@ const OpenGraphHead = () => (
     <meta name="description" content="My personal solace place on web-earth." />
     <meta property="og:title" content="KH Yusuf | Frontend Developer" />
     <meta property="og:site_name" content="Yusuf Kehinde Hussein" />
-    <meta property="og:url" content="" />
+    <meta property="og:url" content="https://yusufkehinde.netlify.app" />
     <meta
       property="og:description"
       content="Ohh you found me?. Awesome! I am Yusuf Kehinde Hussein. Or you could call me Kenny. That works too . . . I am a Frontend Developer"
@@ -16,6 +16,9 @@ const OpenGraphHead = () => (
       itemProp="image"
       content="https://yusufkehinde.netlify.app/og.png"
     ></meta>
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="600" />
   </Head>
 )
 export default OpenGraphHead
