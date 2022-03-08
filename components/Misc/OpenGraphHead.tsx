@@ -19,6 +19,18 @@ const OpenGraphHead = () => (
     <meta property="og:locale" content="en_GB" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="600" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image:alt" content="Yusuf Kehinde Hussein" />
+    <meta name="twitter:title" content="KH Yusuf | Frontend Developer" />
+    <meta
+      name="twitter:description"
+      content="Ohh you found me?. Awesome! I am Yusuf Kehinde Hussein. Or you could call me Kenny. That works too . . . I am a Frontend Developer"
+    />
+    <meta
+      name="twitter:image"
+      content="https://yusufkehinde.netlify.app/og.png"
+    />
   </Head>
 )
 export default OpenGraphHead
