@@ -12,9 +12,9 @@ const OpenGraphHead = () => (
     />
     <meta property="og:type" content="website" />
     <meta
-      property="og:image:secure_url"
+      property="og:image"
       itemProp="image"
-      content="https://yusufkehinde.netlify.app/ogimage.png"
+      content="https://yusufkehinde.netlify.app/og.png"
     ></meta>
   </Head>
 )
