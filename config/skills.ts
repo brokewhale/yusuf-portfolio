@@ -28,6 +28,8 @@ import {
   SiGo,
   SiRust,
   SiAlchemy,
+  SiCloudfoundry,
+  SiSolidity,
 } from 'react-icons/si'
 import { AiOutlineAntDesign } from 'react-icons/ai'
 import { IoLogoPwa } from 'react-icons/io5'
@@ -103,6 +105,10 @@ export const Skills: {
   ],
   blockchain: [
     {
+      name: 'Solidity',
+      icon: SiSolidity,
+    },
+    {
       name: 'Hardhat',
       icon: FaHardHat,
     },
@@ -111,12 +117,8 @@ export const Skills: {
       icon: SiAlchemy,
     },
     {
-      name: 'Golang',
-      icon: SiGo,
-    },
-    {
-      name: 'Rust',
-      icon: SiRust,
+      name: 'Foundry',
+      icon: SiCloudfoundry,
     },
   ],
   cloud: [
