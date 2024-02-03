@@ -104,7 +104,7 @@ const Sidebar = () => {
             className={styles.marginTopSmall}
             variants={fadeInUp}
           >
-            Frontend Developer
+            Solutions Engineer & Frontend Developer
           </MotionHeading>
 
           <MotionText
@@ -114,18 +114,18 @@ const Sidebar = () => {
             variants={fadeInUp}
             maxWidth={{ base: '100%', lg: '80%' }}
           >
-            Hey!{' '}
+            Hey{' '}
             <Text variant="emphasis" as="span">
               {' '}
-              Thank you!
+              Welcome!
             </Text>{' '}
-            for taking the time to visit my personal website. I`m a front-end
-            developer that creates websites and web and mobile applications, and
-            I`ve lately been interested in
+            to my personal website. I&apos;m a Frontend Developer and Solutions
+            Engineer, passionate about Web3. Skilled in{' '}
             <Text variant="emphasis" as="span">
-              {' '}
-              Web3 technologies (🧱, 🚀).
+              DevRel and Tech Support,{' '}
             </Text>
+            I turn tech challenges into simple solutions. Ready to collaborate
+            and innovate in the digital world.
           </MotionText>
           <MotionButton
             size="lg"

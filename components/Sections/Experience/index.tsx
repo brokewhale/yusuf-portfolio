@@ -16,16 +16,20 @@ const DetailSection = () => (
       Places i’ve worked.
     </Heading>
     <Text variant="description">
-      Since 2020, I`ve had the opportunity to work with a number of firms,
-      allowing me to polish my abilities and talents. These businesses will
-      forever hold a special place in my heart. I`m currently on the lookout for
-      my next{' '}
-      <Tooltip label="Hit me up" aria-label="hit me up" hasArrow>
+      Over the past years, I&apos;ve had the privilege of collaborating with
+      various exceptional firms, where I honed my skills and talents. These
+      experiences have left an indelible mark on me. I&apos;m now eagerly
+      seeking my next{' '}
+      <Tooltip
+        label="Sol Eng, SWE, DevRel, Tech Support"
+        aria-label="hit me up"
+        hasArrow
+      >
         <Text as="span" variant="emphasis">
-          <b>frontend development</b>
+          <b>venture</b>
         </Text>
       </Tooltip>{' '}
-      position.
+      in the industry.
     </Text>
 
     <ExperienceTab />

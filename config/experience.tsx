@@ -1,6 +1,11 @@
-import { Link } from '@chakra-ui/react'
+import { Link, Text, Tooltip } from '@chakra-ui/react'
 
-export type Company = 'Nativebrands' | 'BPTech'
+export type Company =
+  | 'Polygon'
+  | 'IQ.wiki'
+  | 'Contribution Labs'
+  | 'Nativebrands'
+  | 'BPTech'
 
 export type CompanyDetail = {
   name: string
@@ -19,6 +24,146 @@ export type CompanyDetail = {
 export const Experiences: {
   [key in Company]: CompanyDetail
 } = {
+  Polygon: {
+    name: 'Polygon Labs',
+    longName: 'Polygon Labs',
+    subDetail: 'Technology',
+    url: 'https://polygon.technology/',
+    position: 'Solutions Engineer (Blockchain & Identity) ',
+    duration: 'July 2022 - Feb 2024',
+    logo: {
+      light: '/worked_at_logos/polygon/polygonlogo.svg',
+      dark: '/worked_at_logos/polygon/polygonlogo-white.svg',
+    },
+    roles: [
+      <>
+        Collaborated with Business Development and Technical Sales in the
+        development of the
+        <Tooltip
+          label="Lead Solutions Engineer responsible for making this a success (click to learn more)"
+          aria-label="Clarify"
+          hasArrow
+        >
+          <Link
+            variant="primaryLink"
+            href="https://marketplace.polygonid.me/ecosystem"
+            target="_blank"
+            rel="noreferrer"
+          >
+            {' '}
+            PolygonID ecosystem{' '}
+          </Link>
+        </Tooltip>
+        from ground up, providing solutions, support, and use-case demos,
+        alongside pre- and post-sale consultations.
+      </>,
+      <>
+        Offering support, solutions and technical documentation on blockchain
+        related issues related to Polygon's suite of solutions
+      </>,
+      <>
+        I collaborated with the documentation team to overhaul the
+        <Link
+          variant="primaryLink"
+          href="https://0xpolygonid.github.io/tutorials/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          {' '}
+          outdated{' '}
+        </Link>
+        PolygonID documentation, transforming it into a comprehensively
+        <Link
+          variant="primaryLink"
+          href="https://devs.polygonid.com/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          {' '}
+          revised version{' '}
+        </Link>
+        . This update significantly simplifies the complexity of the previous
+        documentation, making integration a seamless process
+      </>,
+      <>
+        Immersed myself in Polygon solutions
+        <Text variant="emphasis" as="span">
+          <b> (POS, zkEVM, CDK, PolygonID)</b>
+        </Text>
+        , delivering solutions and technical support to developers and partners
+        <Text variant="emphasis" as="span">
+          <b> (e.g., SAFE, CircleCI, Verida, Flipkart, Guild, etc.)</b>
+        </Text>
+        , along with pre- and post-sale consultations.
+      </>,
+    ],
+  },
+  'IQ.wiki': {
+    name: 'IQ.wiki',
+    longName: 'Everipedia',
+    subDetail: 'prev Everipedia',
+    url: 'https://iq.wiki/',
+    position: 'Fullstack Blockchain developer ',
+    duration: 'March 2022 - July 2022',
+    logo: {
+      light: '/worked_at_logos/iq/IQwiki.svg',
+      dark: '/worked_at_logos/iq/iqwiki-dark.png',
+    },
+    roles: [
+      <>
+        Partnered with cross-functional teams to launch
+        <Link
+          variant="primaryLink"
+          href="https://iq.wik/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          {' '}
+          IQ.wiki{' '}
+        </Link>
+        , the first blockchain-based Wikipedia, establishing new standards in
+        decentralized knowledge sharing.
+      </>,
+      <>
+        Solely spearheaded the Brainies NFT project, managing the lifecycle from
+        Solidity smart contract development to frontend decentralized
+        application (dApp) implementation, showcasing technical versatility and
+        innovation
+      </>,
+    ],
+  },
+  'Contribution Labs': {
+    name: 'Contribution Labs',
+    longName: 'Deform',
+    subDetail: 'prev Contribution Labs',
+    url: 'https://www.deform.cc/',
+    position: 'Frontend Engineer',
+    duration: 'March 2022',
+    logo: {
+      light: '/worked_at_logos/contributionsLab/contributionslab.png',
+      dark: '/worked_at_logos/contributionsLab/contributionslab.png',
+    },
+    roles: [
+      <>
+        Actively collaborated with the Contributions Lab team to accelerate the
+        <Link
+          variant="primaryLink"
+          href="https://mintkudos.xyz/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          {' '}
+          MintKudos{' '}
+        </Link>{' '}
+        app's MVP development, ensuring its readiness for user engagement and
+        real-world application.
+      </>,
+      <>
+        Enhancing the MintKudos app's codebase to optimize performance,
+        implement best practices, and elevate the overall user experience.
+      </>,
+    ],
+  },
   Nativebrands: {
     name: 'Nativebrands',
     longName: 'Nativebrands Digital Agency',
@@ -132,4 +277,10 @@ export const Experiences: {
   },
 }
 
-export const ExperiencesList = [Experiences.Nativebrands, Experiences.BPTech]
+export const ExperiencesList = [
+  Experiences.Polygon,
+  Experiences['IQ.wiki'],
+  Experiences['Contribution Labs'],
+  Experiences.Nativebrands,
+  Experiences.BPTech,
+]
