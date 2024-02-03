@@ -47,28 +47,32 @@ const Detail = ({ onOpen }: ISkillSetModal) => {
         What i do.
       </Heading>
       <Text variant="description">
-        I`ve been working as a professional developer for the past two years. I
-        specialize in creating
+        As a
         <Tooltip
-          label="Ha!. border: 1px solid red "
-          aria-label="Border joke?"
+          label="I'm a coffee pot, I brew solutions! ☕️🤖"
+          aria-label="solution engineer and frontend developer joke"
           hasArrow
         >
           <Text as="span" variant="emphasis">
-            <b> pixel-perfect </b>
+            <b> Solutions Engineer and Frontend Developer </b>
           </Text>
         </Tooltip>
-        user interfaces and dreamy user experiences. What you see is exactly
-        what I create. Along the process, I`m also
-        <Tooltip
-          label="probably nothing D_D (🧱, 🚀)"
-          aria-label="WAGMI"
-          hasArrow
-        >
+        , I excel in simplifying complex tech into intuitive solutions.
+        Specializing in
+        <Tooltip label="Hit me up!!" aria-label="Hit me up!!" hasArrow>
           <Text as="span" variant="emphasis">
-            <b> learning and developing web3 stuff.</b>
+            <b> DevRel and Tech Support </b>
           </Text>
-        </Tooltip>{' '}
+        </Tooltip>
+        , I leverage strong communication skills with technical expertise,
+        driving impactful projects globally. Committed to advancing blockchain
+        and
+        <Tooltip label="Privacy!!🔒🌐🆔" aria-label="identity" hasArrow>
+          <Text as="span" variant="emphasis">
+            <b> digital identity </b>
+          </Text>
+        </Tooltip>
+        , I'm ready to transform your tech visions into reality.
         <br /> <br />
         Here are a couple of the technologies I
         <Tooltip label="console.log((🧱, 🚀))" aria-label="log" hasArrow>
@@ -76,7 +80,7 @@ const Detail = ({ onOpen }: ISkillSetModal) => {
             <b> utilize </b>
           </Text>
         </Tooltip>
-        in my development.{' '}
+        in my development.
       </Text>
 
       <SimpleGrid columns={2} spacing={4}>
