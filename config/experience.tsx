@@ -1,6 +1,10 @@
 import { Link } from '@chakra-ui/react'
 
-export type Company = 'Nativebrands' | 'BPTech'
+export type Company =
+  | 'IQ.wiki'
+  | 'Contribution Labs'
+  | 'Nativebrands'
+  | 'BPTech'
 
 export type CompanyDetail = {
   name: string
@@ -19,6 +23,72 @@ export type CompanyDetail = {
 export const Experiences: {
   [key in Company]: CompanyDetail
 } = {
+  'IQ.wiki': {
+    name: 'IQ.wiki',
+    longName: 'Everipedia',
+    subDetail: 'prev Everipedia',
+    url: 'https://iq.wiki/',
+    position: 'Fullstack Blockchain developer ',
+    duration: 'March 2022 - July 2022',
+    logo: {
+      light: '/worked_at_logos/iq/IQwiki.svg',
+      dark: '/worked_at_logos/iq/iqwiki-dark.png',
+    },
+    roles: [
+      <>
+        Partnered with cross-functional teams to launch
+        <Link
+          variant="primaryLink"
+          href="https://iq.wik/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          {' '}
+          IQ.wiki{' '}
+        </Link>
+        , the first blockchain-based Wikipedia, establishing new standards in
+        decentralized knowledge sharing.
+      </>,
+      <>
+        Solely spearheaded the Brainies NFT project, managing the lifecycle from
+        Solidity smart contract development to frontend decentralized
+        application (dApp) implementation, showcasing technical versatility and
+        innovation
+      </>,
+    ],
+  },
+  'Contribution Labs': {
+    name: 'Contribution Labs',
+    longName: 'Deform',
+    subDetail: 'prev Contribution Labs',
+    url: 'https://www.deform.cc/',
+    position: 'Frontend Engineer',
+    duration: 'March 2022',
+    logo: {
+      light: '/worked_at_logos/contributionsLab/contributionslab.png',
+      dark: '/worked_at_logos/contributionsLab/contributionslab.png',
+    },
+    roles: [
+      <>
+        Actively collaborated with the Contributions Lab team to accelerate the
+        <Link
+          variant="primaryLink"
+          href="https://mintkudos.xyz/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          {' '}
+          MintKudos{' '}
+        </Link>{' '}
+        app's MVP development, ensuring its readiness for user engagement and
+        real-world application.
+      </>,
+      <>
+        Enhancing the MintKudos app's codebase to optimize performance,
+        implement best practices, and elevate the overall user experience.
+      </>,
+    ],
+  },
   Nativebrands: {
     name: 'Nativebrands',
     longName: 'Nativebrands Digital Agency',
@@ -132,4 +202,9 @@ export const Experiences: {
   },
 }
 
-export const ExperiencesList = [Experiences.Nativebrands, Experiences.BPTech]
+export const ExperiencesList = [
+  Experiences['IQ.wiki'],
+  Experiences['Contribution Labs'],
+  Experiences.Nativebrands,
+  Experiences.BPTech,
+]
