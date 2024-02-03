@@ -1,6 +1,7 @@
-import { Link } from '@chakra-ui/react'
+import { Link, Text, Tooltip } from '@chakra-ui/react'
 
 export type Company =
+  | 'Polygon'
   | 'IQ.wiki'
   | 'Contribution Labs'
   | 'Nativebrands'
@@ -23,6 +24,80 @@ export type CompanyDetail = {
 export const Experiences: {
   [key in Company]: CompanyDetail
 } = {
+  Polygon: {
+    name: 'Polygon Labs',
+    longName: 'Polygon Labs',
+    subDetail: 'Technology',
+    url: 'https://polygon.technology/',
+    position: 'Solutions Engineer (Blockchain & Identity) ',
+    duration: 'July 2022 - Feb 2024',
+    logo: {
+      light: '/worked_at_logos/polygon/polygonlogo.svg',
+      dark: '/worked_at_logos/polygon/polygonlogo-white.svg',
+    },
+    roles: [
+      <>
+        Collaborated with Business Development and Technical Sales in the
+        development of the
+        <Tooltip
+          label="Lead Solutions Engineer responsible for making this a success (click to learn more)"
+          aria-label="Clarify"
+          hasArrow
+        >
+          <Link
+            variant="primaryLink"
+            href="https://marketplace.polygonid.me/ecosystem"
+            target="_blank"
+            rel="noreferrer"
+          >
+            {' '}
+            PolygonID ecosystem{' '}
+          </Link>
+        </Tooltip>
+        from ground up, providing solutions, support, and use-case demos,
+        alongside pre- and post-sale consultations.
+      </>,
+      <>
+        Offering support, solutions and technical documentation on blockchain
+        related issues related to Polygon's suite of solutions
+      </>,
+      <>
+        I collaborated with the documentation team to overhaul the
+        <Link
+          variant="primaryLink"
+          href="https://0xpolygonid.github.io/tutorials/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          {' '}
+          outdated{' '}
+        </Link>
+        PolygonID documentation, transforming it into a comprehensively
+        <Link
+          variant="primaryLink"
+          href="https://devs.polygonid.com/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          {' '}
+          revised version{' '}
+        </Link>
+        . This update significantly simplifies the complexity of the previous
+        documentation, making integration a seamless process
+      </>,
+      <>
+        Immersed myself in Polygon solutions
+        <Text variant="emphasis" as="span">
+          <b> (POS, zkEVM, CDK, PolygonID)</b>
+        </Text>
+        , delivering solutions and technical support to developers and partners
+        <Text variant="emphasis" as="span">
+          <b> (e.g., SAFE, CircleCI, Verida, Flipkart, Guild, etc.)</b>
+        </Text>
+        , along with pre- and post-sale consultations.
+      </>,
+    ],
+  },
   'IQ.wiki': {
     name: 'IQ.wiki',
     longName: 'Everipedia',
@@ -203,6 +278,7 @@ export const Experiences: {
 }
 
 export const ExperiencesList = [
+  Experiences.Polygon,
   Experiences['IQ.wiki'],
   Experiences['Contribution Labs'],
   Experiences.Nativebrands,
