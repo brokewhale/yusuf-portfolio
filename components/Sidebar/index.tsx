@@ -114,12 +114,12 @@ const Sidebar = () => {
             variants={fadeInUp}
             maxWidth={{ base: '100%', lg: '80%' }}
           >
-            Hey!{' '}
+            Hey{' '}
             <Text variant="emphasis" as="span">
               {' '}
               Welcome!
             </Text>{' '}
-            to my personal website. I'm a Frontend Developer and Solutions
+            to my personal website. I&apos;m a Frontend Developer and Solutions
             Engineer, passionate about Web3. Skilled in{' '}
             <Text variant="emphasis" as="span">
               DevRel and Tech Support,{' '}

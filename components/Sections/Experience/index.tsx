@@ -16,9 +16,10 @@ const DetailSection = () => (
       Places i’ve worked.
     </Heading>
     <Text variant="description">
-      Over the past years, I've had the privilege of collaborating with various
-      exceptional firms, where I honed my skills and talents. These experiences
-      have left an indelible mark on me. I'm now eagerly seeking my next{' '}
+      Over the past years, I&apos;ve had the privilege of collaborating with
+      various exceptional firms, where I honed my skills and talents. These
+      experiences have left an indelible mark on me. I&apos;m now eagerly
+      seeking my next{' '}
       <Tooltip
         label="Sol Eng, SWE, DevRel, Tech Support"
         aria-label="hit me up"

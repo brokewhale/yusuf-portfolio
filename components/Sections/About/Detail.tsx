@@ -72,7 +72,7 @@ const Detail = ({ onOpen }: ISkillSetModal) => {
             <b> digital identity </b>
           </Text>
         </Tooltip>
-        , I'm ready to transform your tech visions into reality.
+        , I&apos;m ready to transform your tech visions into reality.
         <br /> <br />
         Here are a couple of the technologies I
         <Tooltip label="console.log((🧱, 🚀))" aria-label="log" hasArrow>
