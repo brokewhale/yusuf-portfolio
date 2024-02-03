@@ -18,7 +18,7 @@ type SocialMedia = {
 export const SocialMedias: SocialMedia[] = [
   {
     label: 'Twitter',
-    href: 'https://twitter.com/CodingMage',
+    href: 'https://twitter.com/0xKenny__',
     icon: FaTwitter,
   },
 
