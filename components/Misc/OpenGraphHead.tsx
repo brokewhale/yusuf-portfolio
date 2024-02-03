@@ -1,14 +1,19 @@
 import Head from 'next/head'
 const OpenGraphHead = () => (
   <Head>
-    <title>KH Yusuf | Frontend Developer</title>
+    <title>
+      KH Yusuf | Solutions Engineer & Frontend Developer | Blockchain Developer
+    </title>
     <meta name="description" content="My personal solace place on web-earth." />
-    <meta property="og:title" content="KH Yusuf | Frontend Developer" />
+    <meta
+      property="og:title"
+      content="KH Yusuf | Solutions Engineer & Frontend Developer | Blockchain Developer"
+    />
     <meta property="og:site_name" content="Yusuf Kehinde Hussein" />
     <meta property="og:url" content="https://yusufkehinde.netlify.app" />
     <meta
       property="og:description"
-      content="Ohh you found me?. Awesome! I am Yusuf Kehinde Hussein. Or you could call me Kenny. That works too . . . I am a Frontend Developer"
+      content="Ohh you found me?. Awesome! I am Yusuf Kehinde Hussein. Or you could call me Kenny. That works too . . . I am a Solutions Engineer & Frontend Developer | Blockchain Developer"
     />
     <meta property="og:type" content="website" />
     <meta
@@ -22,10 +27,13 @@ const OpenGraphHead = () => (
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:image:alt" content="Yusuf Kehinde Hussein" />
-    <meta name="twitter:title" content="KH Yusuf | Frontend Developer" />
+    <meta
+      name="twitter:title"
+      content="KH Yusuf | Solutions Engineer & Frontend Developer | Blockchain Developer"
+    />
     <meta
       name="twitter:description"
-      content="Ohh you found me?. Awesome! I am Yusuf Kehinde Hussein. Or you could call me Kenny. That works too . . . I am a Frontend Developer"
+      content="Ohh you found me?. Awesome! I am Yusuf Kehinde Hussein. Or you could call me Kenny. That works too . . . I am a Solutions Engineer & Frontend Developer | Blockchain Developer"
     />
     <meta
       name="twitter:image"
