@@ -73,6 +73,7 @@ const SkillList = ({
 const SkillSetModal = ({ isOpen, onClose }: ISkillSetModal) => {
   const backendCols = splitSkills(Skills.backend)
   const frontendCols = splitSkills(Skills.frontend)
+  const cloudCols = splitSkills(Skills.cloud)
   const cicdCols = splitSkills(Skills.cicd)
   const dataBaseCols = splitSkills(Skills.database)
   const uiFrameWorkCols = splitSkills(Skills['ui frameworks'])
@@ -93,6 +94,7 @@ const SkillSetModal = ({ isOpen, onClose }: ISkillSetModal) => {
         <ModalBody className={styles.skillModal}>
           <SkillList title="Backend-focused" columns={backendCols} />
           <SkillList title="Frontend-focused" columns={frontendCols} />
+          <SkillList title="Cloud Computing" columns={cloudCols} />
           <SkillList title="CICD-focused" columns={cicdCols} />
           <SkillList title="Database and Streams" columns={dataBaseCols} />
           <SkillList title="Ui Frameworks" columns={uiFrameWorkCols} />

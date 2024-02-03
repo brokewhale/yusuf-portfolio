@@ -22,13 +22,22 @@ import {
   SiExpress,
   SiNetlify,
   SiVercel,
+  SiAmazonaws,
+  SiGooglecloud,
+  SiPostgresql,
+  SiGo,
+  SiRust,
+  SiAlchemy,
 } from 'react-icons/si'
 import { AiOutlineAntDesign } from 'react-icons/ai'
 import { IoLogoPwa } from 'react-icons/io5'
+import { FaHardHat } from 'react-icons/fa'
 
 export type SkillCategory =
   | 'backend'
   | 'frontend'
+  | 'blockchain'
+  | 'cloud'
   | 'cicd'
   | 'database'
   | 'ui frameworks'
@@ -52,6 +61,14 @@ export const Skills: {
     {
       name: 'Express js',
       icon: SiExpress,
+    },
+    {
+      name: 'Golang',
+      icon: SiGo,
+    },
+    {
+      name: 'Rust',
+      icon: SiRust,
     },
   ],
   frontend: [
@@ -84,10 +101,42 @@ export const Skills: {
       icon: SiGraphql,
     },
   ],
+  blockchain: [
+    {
+      name: 'Hardhat',
+      icon: FaHardHat,
+    },
+    {
+      name: 'Alchemy',
+      icon: SiAlchemy,
+    },
+    {
+      name: 'Golang',
+      icon: SiGo,
+    },
+    {
+      name: 'Rust',
+      icon: SiRust,
+    },
+  ],
+  cloud: [
+    {
+      name: 'AWS',
+      icon: SiAmazonaws,
+    },
+    {
+      name: 'Google Cloud',
+      icon: SiGooglecloud,
+    },
+  ],
   database: [
     {
       name: 'MongoDb',
       icon: SiMongodb,
+    },
+    {
+      name: 'PostgreSQL',
+      icon: SiPostgresql,
     },
   ],
   cicd: [

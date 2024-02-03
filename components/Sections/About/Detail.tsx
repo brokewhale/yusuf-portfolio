@@ -15,7 +15,7 @@ import {
 import {
   SiJavascript,
   SiTypescript,
-  SiGraphql,
+  SiAmazonaws,
   SiReact,
   SiNextdotjs,
   SiNodedotjs,
@@ -87,7 +87,7 @@ const Detail = ({ onOpen }: ISkillSetModal) => {
         <List spacing={3}>
           <ListItem fontSize="small" display="flex" alignItems="center">
             <ListIcon as={SiJavascript} color={emphasis} fontSize="2em" />
-            Javascript (ES6+)
+            Javascript
           </ListItem>
           <ListItem fontSize="small" display="flex" alignItems="center">
             <ListIcon as={SiTypescript} color={emphasis} fontSize="2em" />
@@ -105,8 +105,8 @@ const Detail = ({ onOpen }: ISkillSetModal) => {
         </List>
         <List spacing={3}>
           <ListItem fontSize="small" display="flex" alignItems="center">
-            <ListIcon as={SiGraphql} color={emphasis} fontSize="2em" />
-            Graphql
+            <ListIcon as={SiAmazonaws} color={emphasis} fontSize="2em" />
+            AWS
           </ListItem>
 
           <ListItem fontSize="small" display="flex" alignItems="center">
