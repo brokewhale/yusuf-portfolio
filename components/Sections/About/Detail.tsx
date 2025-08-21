@@ -10,7 +10,6 @@ import {
   Box,
   Tooltip,
   Stack,
-  useColorModeValue,
 } from '@chakra-ui/react'
 import {
   SiJavascript,
@@ -24,13 +23,14 @@ import {
 } from 'react-icons/si'
 import { GiCoffeePot } from 'react-icons/gi'
 import { IoMdOpen } from 'react-icons/io'
+import { useCommonColors } from 'hooks/useCommonStyles'
 
-type ISkillSetModal = {
-  onOpen(): void
+interface SkillSetModalProps {
+  onOpen: () => void
 }
 
-const Detail = ({ onOpen }: ISkillSetModal) => {
-  const emphasis = useColorModeValue('teal.500', 'cyan.200')
+const Detail = ({ onOpen }: SkillSetModalProps) => {
+  const { emphasis } = useCommonColors()
   const currentYear = new Date().getFullYear()
   const professionalYears = currentYear - 2016
 

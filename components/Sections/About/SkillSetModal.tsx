@@ -12,26 +12,25 @@ import {
   ListItem,
   ListIcon,
   SimpleGrid,
-  useColorModeValue,
   Divider,
   Text,
 } from '@chakra-ui/react'
 import styles from './styles.module.css'
 import { Skill, Skills, splitSkills } from 'config/skills'
+import { useCommonColors } from 'hooks/useCommonStyles'
 
-type ISkillSetModal = {
+interface SkillSetModalProps {
   isOpen: boolean
-  onClose(): void
+  onClose: () => void
 }
 
-const SkillList = ({
-  title,
-  columns,
-}: {
+interface SkillListProps {
   title: string
   columns: Skill[][]
-}) => {
-  const emphasis = useColorModeValue('teal.500', 'cyan.200')
+}
+
+const SkillList = ({ title, columns }: SkillListProps) => {
+  const { emphasis } = useCommonColors()
   const [colOne, colTwo = []] = columns
   return (
     <>
@@ -70,7 +69,7 @@ const SkillList = ({
     </>
   )
 }
-const SkillSetModal = ({ isOpen, onClose }: ISkillSetModal) => {
+const SkillSetModal = ({ isOpen, onClose }: SkillSetModalProps) => {
   const backendCols = splitSkills(Skills.backend)
   const frontendCols = splitSkills(Skills.frontend)
   const blockchainCols = splitSkills(Skills.blockchain)
