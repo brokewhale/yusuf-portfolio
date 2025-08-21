@@ -1,0 +1,22 @@
+# Robots.txt for Yusuf Kehinde Hussein Portfolio
+# https://yusufkehinde.dev
+
+User-agent: *
+Allow: /
+
+# Block crawling of internal assets
+Disallow: /_next/
+Disallow: /api/
+Disallow: /*.json
+
+# Allow specific important files
+Allow: /favicon.ico
+Allow: /og.png
+Allow: /avatar-*.png
+Allow: /logo*.png
+
+# Sitemap location
+Sitemap: https://yusufkehinde.dev/sitemap.xml
+
+# Crawl delay for respectful crawling
+Crawl-delay: 1
