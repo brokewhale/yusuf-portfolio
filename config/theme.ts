@@ -62,7 +62,8 @@ const textVariants = {
 const theme = extendTheme({
   config,
   fonts: {
-    body: 'Poppins',
+    body: 'var(--font-poppins), Poppins, system-ui, sans-serif',
+    heading: 'var(--font-poppins), Poppins, system-ui, sans-serif',
   },
   colors,
   styles,

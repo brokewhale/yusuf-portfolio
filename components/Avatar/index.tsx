@@ -6,7 +6,7 @@ import { avatarAnimation } from 'config/animations'
 
 const AvatarImages = {
   DarkMode: '/avatar-dark.png',
-  LightMode: './avatar-light.png',
+  LightMode: '/avatar-light.png',
 }
 
 declare global {
