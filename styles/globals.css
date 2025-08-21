@@ -1,13 +1,26 @@
+/* Critical CSS for LCP optimization */
 html,
 body {
   padding: 0;
   margin: 0;
-  /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-   */
   scroll-behavior: smooth;
+  /* Ensure text is visible during webfont load */
+  font-display: swap;
 }
 
+/* Critical font fallbacks for immediate text rendering */
+body {
+  font-family:
+    var(--font-poppins),
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    'Helvetica Neue',
+    Arial,
+    sans-serif;
+}
 
 a {
   color: inherit;
@@ -18,60 +31,55 @@ a {
   box-sizing: border-box;
 }
 
-body::-webkit-scrollbar{
- width: 0.4em;
+body::-webkit-scrollbar {
+  width: 0.4em;
 }
-body::-webkit-scrollbar-track-piece{
+body::-webkit-scrollbar-track-piece {
   width: 10px;
 }
-body::-webkit-scrollbar-thumb{
+body::-webkit-scrollbar-thumb {
   background: var(--chakra-colors-gray-600);
   border-radius: 1em;
 }
 
 /* Fallback */
-@media (max-width: 480px) { 
-  body::-webkit-scrollbar{
+@media (max-width: 480px) {
+  body::-webkit-scrollbar {
     width: 0;
   }
-  body::-webkit-scrollbar-track-piece{
+  body::-webkit-scrollbar-track-piece {
     width: 0;
   }
 }
 
 /* Fallback */
-@media (max-width: 1279px) { 
-  #mainGrid{
+@media (max-width: 1279px) {
+  #mainGrid {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(1, 0);
   }
-  .contentRow{
+  .contentRow {
     min-height: auto !important;
-  }  
+  }
 }
 /* Tablet Support */
-@media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
-  and (orientation: portrait) 
-  and (-webkit-min-device-pixel-ratio: 1) {
-  body{
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+  body {
     overflow-y: scroll !important;
-  }         
-  #mainGrid{
+  }
+  #mainGrid {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(1, 0);
   }
-  main{
-    overflow-y: unset  !important;
+  main {
+    overflow-y: unset !important;
   }
-  #sidebarCircle{
+  #sidebarCircle {
     display: none !important;
   }
-  .contentRow{
+  .contentRow {
     min-height: auto !important;
     padding: var(--chakra-space-14);
     justify-content: center;
   }
 }
-

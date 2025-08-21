@@ -8,7 +8,6 @@ import {
   Icon,
   SimpleGrid,
   Box,
-  Tooltip,
   Stack,
 } from '@chakra-ui/react'
 import {
@@ -46,79 +45,70 @@ const Detail = ({ onOpen }: SkillSetModalProps) => {
       >
         What i do.
       </Heading>
-      <Text variant="description">
-        As a
-        <Tooltip
-          label="I'm a coffee pot, I brew solutions! ☕️🤖"
-          aria-label="solution engineer and frontend developer joke"
-          hasArrow
-        >
-          <Text as="span" variant="emphasis">
-            <b> Solutions Engineer and Frontend Developer </b>
-          </Text>
-        </Tooltip>
+      <Text
+        variant="description"
+        fontSize={{ base: 'md', lg: 'lg' }}
+        lineHeight="1.6"
+      >
+        As a{' '}
+        <Text as="strong" variant="emphasis" fontWeight="600">
+          Solutions Engineer and Frontend Developer
+        </Text>
         , I excel in simplifying complex tech into intuitive solutions.
-        Specializing in
-        <Tooltip label="Hit me up!!" aria-label="Hit me up!!" hasArrow>
-          <Text as="span" variant="emphasis">
-            <b> DevRel and Tech Support </b>
-          </Text>
-        </Tooltip>
+        Specializing in{' '}
+        <Text as="strong" variant="emphasis" fontWeight="600">
+          DevRel and Tech Support
+        </Text>
         , I leverage strong communication skills with technical expertise,
         driving impactful projects globally. Committed to advancing blockchain
-        and
-        <Tooltip label="Privacy!!🔒🌐🆔" aria-label="identity" hasArrow>
-          <Text as="span" variant="emphasis">
-            <b> digital identity </b>
-          </Text>
-        </Tooltip>
+        and{' '}
+        <Text as="strong" variant="emphasis" fontWeight="600">
+          digital identity
+        </Text>
         , I&apos;m ready to transform your tech visions into reality.
-        <br /> <br />
-        Here are a couple of the technologies I
-        <Tooltip label="console.log((🧱, 🚀))" aria-label="log" hasArrow>
-          <Text as="span" variant="emphasis">
-            <b> utilize </b>
-          </Text>
-        </Tooltip>
-        in my development.
+      </Text>
+      <Text variant="description" fontSize="sm" mt={4}>
+        Here are a couple of the technologies I{' '}
+        <Text as="span" variant="emphasis" fontWeight="600">
+          utilize
+        </Text>{' '}
+        in my development:
       </Text>
 
       <SimpleGrid columns={2} spacing={4}>
         <List spacing={3}>
           <ListItem fontSize="small" display="flex" alignItems="center">
-            <ListIcon as={SiJavascript} color={emphasis} fontSize="2em" />
+            <ListIcon as={SiJavascript} color={emphasis} fontSize="1.8em" />
             Javascript
           </ListItem>
           <ListItem fontSize="small" display="flex" alignItems="center">
-            <ListIcon as={SiTypescript} color={emphasis} fontSize="2em" />
+            <ListIcon as={SiTypescript} color={emphasis} fontSize="1.8em" />
             Typescript
           </ListItem>
-
           <ListItem fontSize="small" display="flex" alignItems="center">
-            <ListIcon as={SiNodedotjs} color={emphasis} fontSize="2em" />
+            <ListIcon as={SiNodedotjs} color={emphasis} fontSize="1.8em" />
             Node
           </ListItem>
           <ListItem fontSize="small" display="flex" alignItems="center">
-            <ListIcon as={SiReact} color={emphasis} fontSize="2em" />
+            <ListIcon as={SiReact} color={emphasis} fontSize="1.8em" />
             React
           </ListItem>
         </List>
         <List spacing={3}>
           <ListItem fontSize="small" display="flex" alignItems="center">
-            <ListIcon as={SiAmazonaws} color={emphasis} fontSize="2em" />
+            <ListIcon as={SiAmazonaws} color={emphasis} fontSize="1.8em" />
             AWS
           </ListItem>
-
           <ListItem fontSize="small" display="flex" alignItems="center">
-            <ListIcon as={SiNextdotjs} color={emphasis} fontSize="2em" />
+            <ListIcon as={SiNextdotjs} color={emphasis} fontSize="1.8em" />
             NextJS
           </ListItem>
           <ListItem fontSize="small" display="flex" alignItems="center">
-            <ListIcon as={SiSolidity} color={emphasis} fontSize="2em" />
+            <ListIcon as={SiSolidity} color={emphasis} fontSize="1.8em" />
             Solidity
           </ListItem>
           <ListItem fontSize="small" display="flex" alignItems="center">
-            <ListIcon as={SiLinux} color={emphasis} fontSize="2em" />
+            <ListIcon as={SiLinux} color={emphasis} fontSize="1.8em" />
             Linux
           </ListItem>
         </List>
