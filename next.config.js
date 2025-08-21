@@ -6,33 +6,21 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  output: 'export',
+  trailingSlash: true,
 
   // Performance optimizations
   // Note: optimizeCss requires additional setup, keeping disabled for now
 
-  // Image optimization
+  // Image optimization for static export
   images: {
-    formats: ['image/webp', 'image/avif'],
-    domains: ['dev.to'], // Add external image domains if needed
+    unoptimized: true, // Required for static export
   },
 
   // Compression
   compress: true,
 
-  // Headers for better caching
-  async headers() {
-    return [
-      {
-        source: '/images/:path*',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable',
-          },
-        ],
-      },
-    ]
-  },
+  // Headers are handled by netlify.toml for static export
 }
 
 module.exports = withBundleAnalyzer(nextConfig)
