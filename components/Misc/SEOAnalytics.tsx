@@ -15,7 +15,7 @@ const SEOAnalytics = () => {
       {/* Google Search Console verification (replace with your verification code when ready) */}
       <meta
         name="google-site-verification"
-        content="YOUR_VERIFICATION_CODE_HERE"
+        content="IraqkHj8jqrmbSHxD4qthbBWjRtooWsFI7GxcJeHUlU"
       />
 
       {/* Bing Webmaster Tools verification (replace with your verification code when ready) */}
