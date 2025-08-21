@@ -54,13 +54,14 @@ const Avatar = () => {
     >
       <Image
         src={imgAvatar}
-        alt="KH Yusuf Avatar"
+        alt="Yusuf Kehinde Hussein - Solutions Engineer and Frontend Developer professional headshot"
         width={250}
         height={250}
         style={{ margin: 'auto', borderRadius: '50%' }}
         placeholder="blur"
         blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyepckuNtlUSaUKWdXNsaHJ3lHYOFP3H8YXPV6dCLdBPn6aD8hYPH+lYFXdBAd3hppEOF7sF5ij5+hxB7OZR6pWfJYtZqBfEOGOg8IKvO3I8bBPKg7aDrG0qG3/rVJbDKtPnqyIo8+IXNGOvzr/AKAqMCGdg+ZSJGrUAHNm+mhXhzlGtKmOHBPj1EdLJL3mhN1GvEiPAGJmdNVIVm4f9WX7Gvr9jHHtfqhL8Xvr/9k="
         priority
+        title="Yusuf Kehinde Hussein - Professional Portfolio"
       />
     </Box>
   )
