@@ -1,7 +1,7 @@
 /* eslint-disable react/no-multi-comp */
+import { memo } from 'react'
 import {
   Box,
-  Image,
   ResponsiveValue,
   Divider,
   Skeleton,
@@ -12,14 +12,13 @@ import {
   Stack,
   useColorModeValue,
 } from '@chakra-ui/react'
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 import styles from './styles.module.css'
 import { easing, DURATIONS } from 'config/animations'
 
-export type FeaturedCardProps = {
-  // Still can't find what's correct value for responsive value
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  height: string | ResponsiveValue<any>
+export interface FeaturedCardProps {
+  height: string | ResponsiveValue<string | number>
   src: string
   idx: number
   title: string
@@ -51,7 +50,7 @@ const variants = {
   },
 }
 
-const MotionImage = motion(Image)
+const MotionBox = motion(Box)
 
 const ProjectDescription = ({
   idx,
@@ -136,19 +135,28 @@ const FeaturedCard = ({
   const isLeftImage = isMobile ? false : idx % 2 === 0
   const bg = useColorModeValue('blackAlpha.50', 'whiteAlpha.200')
   const CoverImage = () => (
-    <MotionImage
+    <MotionBox
       height={height}
       width="100%"
-      src={src}
-      alt={title}
-      objectFit="cover"
-      objectPosition={objectPosition}
-      loading="lazy"
-      opacity={0.75}
+      position="relative"
+      overflow="hidden"
       whileHover={variants.hover}
       whileTap={variants.tap}
-      fallback={<Skeleton height={height} width="100%" />}
-    />
+      opacity={0.75}
+    >
+      <Image
+        src={src}
+        alt={title}
+        fill
+        style={{
+          objectFit: 'cover',
+          objectPosition: objectPosition || 'center',
+        }}
+        loading="lazy"
+        placeholder="blur"
+        blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyepckuNtlUSaUKWdXNsaHJ3lHYOFP3H8YXPV6dCLdBPn6aD8hYPH+lYFXdBAd3hppEOF7sF5ij5+hxB7OZR6pWfJYtZqBfEOGOg8IKvO3I8bBPKg7aDrG0qG3/rVJbDKtPnqyIo8+IXNGOvzr/AKAqMCGdg+ZSJGrUAHNm+mhXhzlGtKmOHBPj1EdLJL3mhN1GvEiPAGJmdNVIVm4f9WX7Gvr9jHHtfqhL8Xvr/9k="
+      />
+    </MotionBox>
   )
 
   return (
@@ -179,4 +187,4 @@ const FeaturedCard = ({
     </Box>
   )
 }
-export default FeaturedCard
+export default memo(FeaturedCard)

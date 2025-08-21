@@ -1,14 +1,8 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-import {
-  Grid,
-  GridItem,
-  Stack,
-  Box,
-  useBreakpointValue,
-} from '@chakra-ui/react'
+import { Grid, GridItem, Stack, Box } from '@chakra-ui/react'
 import dynamic from 'next/dynamic'
 import OpenGraphHead from 'components/Misc/OpenGraphHead'
-import FadeInLayout from 'components/Layout/FadeWhenVisible'
+import Section from 'components/Layout/Section'
+import { useCommonBreakpoints } from 'hooks/useCommonStyles'
 import Menu from 'components/Menu'
 import Sidebar from 'components/Sidebar'
 import Avatar from 'components/Avatar'
@@ -22,15 +16,13 @@ import { Article } from 'types/article'
 const DevToArticles = dynamic(() => import('components/Sections/DevToArticles'))
 const GetInTouch = dynamic(() => import('components/Sections/GetInTouch'))
 
-const Portfolio = ({ articles }: { articles: Article[] }): JSX.Element => {
-  const sideBarPadding = useBreakpointValue({ base: '5', md: '8', lg: '14' })
-  const mainContent = useBreakpointValue({
-    base: '5',
-    md: '14',
-    lg: '14',
-    xl: 0,
-  })
-  const paddingTop = useBreakpointValue({ base: '20', sm: 20, md: 20 })
+interface PortfolioProps {
+  articles: Article[]
+}
+
+const Portfolio = ({ articles }: PortfolioProps): JSX.Element => {
+  const { sideBarPadding, mainContentPadding, paddingTop } =
+    useCommonBreakpoints()
 
   return (
     <>
@@ -63,77 +55,46 @@ const Portfolio = ({ articles }: { articles: Article[] }): JSX.Element => {
         </GridItem>
         <GridItem
           as="main"
-          padding={mainContent}
+          padding={mainContentPadding}
           rowSpan={2}
           colSpan={{ base: 1, sm: 2, md: 2, lg: 3, xl: 3 }}
           overflow="hidden"
         >
           <Stack w="100" spacing={24}>
-            <FadeInLayout>
-              <Box
-                id="aboutMe"
-                className="contentRow"
-                minH={{ lg: '100vh' }}
-                display="flex"
-                alignItems="center"
-                paddingTop={{ base: 0, lg: 20, xl: 0 }}
-                paddingBottom={{ base: 12, lg: 0 }}
-                flexDirection={{
-                  base: 'column-reverse',
-                  lg: 'row',
-                }}
-              >
-                <About />
-                <Avatar />
-              </Box>
-            </FadeInLayout>
-            <FadeInLayout>
-              <Box
-                id="jobs"
-                className="contentRow"
-                paddingTop={{ base: 0, lg: 20, xl: 0 }}
-                paddingBottom={{ base: 12, lg: 10 }}
-                paddingX={0}
-                flexDirection={'row'}
-              >
-                <Experience />
-              </Box>
-            </FadeInLayout>
-            <FadeInLayout>
-              <Box
-                id="works"
-                className="contentRow"
-                paddingTop={{ base: 0, lg: 20, xl: 20 }}
-                paddingBottom={{ base: 12, lg: 10 }}
-                paddingX={0}
-                flexDirection={'row'}
-              >
-                <FeaturedWorks />
-              </Box>
-            </FadeInLayout>
-            <FadeInLayout>
-              <Box
-                id="blog"
-                className="contentRow"
-                paddingTop={{ base: 0, lg: 20, xl: 20 }}
-                paddingBottom={{ base: 12, lg: 10 }}
-                paddingX={0}
-                flexDirection={'row'}
-              >
-                <DevToArticles articles={articles} />
-              </Box>
-            </FadeInLayout>
-            <FadeInLayout>
-              <Box
-                id="contact"
-                className="contentRow"
-                paddingTop={{ base: 0, lg: 20, xl: 20 }}
-                paddingX={0}
-                flexDirection={'row'}
-              >
-                <GetInTouch />
-              </Box>
-            </FadeInLayout>
+            <Section
+              id="aboutMe"
+              minH={{ lg: '100vh' }}
+              display="flex"
+              alignItems="center"
+              paddingBottom={{ base: 12, lg: 0 }}
+              flexDirection={{
+                base: 'column-reverse',
+                lg: 'row',
+              }}
+            >
+              <About />
+              <Avatar />
+            </Section>
+
+            <Section id="jobs">
+              <Experience />
+            </Section>
+
+            <Section id="works" paddingTop={{ base: 0, lg: 20, xl: 20 }}>
+              <FeaturedWorks />
+            </Section>
+
+            <Section id="blog" paddingTop={{ base: 0, lg: 20, xl: 20 }}>
+              <DevToArticles articles={articles} />
+            </Section>
+
+            <Section
+              id="contact"
+              paddingTop={{ base: 0, lg: 20, xl: 20 }}
+              paddingBottom={0}
+            >
+              <GetInTouch />
+            </Section>
           </Stack>
         </GridItem>
       </Grid>

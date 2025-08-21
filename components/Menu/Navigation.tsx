@@ -1,4 +1,4 @@
-import { memo, useCallback } from 'react'
+import { memo, useCallback, useMemo } from 'react'
 import {
   Container,
   Button,
@@ -22,6 +22,7 @@ const Navigation = () => {
   const MotionContainer = motion(Container)
   const [isOpen, toggleOpen] = useCycle(false, true)
   const isMobile = useBreakpointValue(mobileBreakpointsMap)
+
   const menuButtonSize = useBreakpointValue({
     base: 'xl',
     md: 'sm',
@@ -38,7 +39,7 @@ const Navigation = () => {
   const btnClassName = `${styles.blogBtn} ${!IsDark && styles.dark}`
   const Icon = IsDark ? SunIcon : MoonIcon
   const onMenuItemClick = useCallback(
-    (e) => {
+    (e: React.MouseEvent) => {
       e.stopPropagation()
       if (isMobile) {
         toggleOpen()
