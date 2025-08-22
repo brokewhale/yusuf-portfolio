@@ -28,6 +28,7 @@ const Portfolio = ({ articles }: PortfolioProps): JSX.Element => {
     <>
       <OpenGraphHead />
       <Menu />
+      {/* @ts-ignore */}
       <Grid
         id="mainGrid"
         templateColumns={{
