@@ -1,14 +1,9 @@
-import {
-  Box,
-  Icon,
-  Text,
-  useBreakpointValue,
-  useColorModeValue,
-} from '@chakra-ui/react'
+import { Box, Icon, Text, useBreakpointValue } from '@chakra-ui/react'
 import { RiMouseLine } from 'react-icons/ri'
 import { motion, Variants, AnimatePresence } from 'framer-motion'
 import useScrollDirection, { ScrollDirection } from 'hooks/useScrollDirection'
 import { mobileBreakpointsMap } from 'config/theme'
+import useColorModeValue from 'hooks/useColorModeValue'
 
 const scrollMoreVariants: Variants = {
   initial: {
@@ -28,7 +23,8 @@ const scrollMoreVariants: Variants = {
     transition: {
       duration: 1.6,
       ease: 'easeInOut',
-      loop: Infinity,
+      repeat: Infinity,
+      repeatType: 'loop',
     },
   },
 }

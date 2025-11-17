@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Script from 'next/script'
 import { useEffect } from 'react'
 
 const SEOAnalytics = () => {
@@ -10,8 +11,10 @@ const SEOAnalytics = () => {
     }
   }, [])
 
+  const isSwEnabled = process.env.NEXT_PUBLIC_ENABLE_SW === 'true'
   return (
-    <Head>
+    <>
+      <Head>
       {/* Google Search Console verification (replace with your verification code when ready) */}
       <meta
         name="google-site-verification"
@@ -94,33 +97,38 @@ const SEOAnalytics = () => {
         }}
       />
 
-      {/* Performance monitoring script */}
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `
-            if ('serviceWorker' in navigator) {
+      </Head>
+      <Script id="seo-analytics" strategy="afterInteractive">
+        {`
+          const swEnabled = ${isSwEnabled}
+          if ('serviceWorker' in navigator) {
+            if (swEnabled) {
               window.addEventListener('load', function() {
-                navigator.serviceWorker.register('/sw.js');
-              });
+                navigator.serviceWorker
+                  .register('/sw.js')
+                  .then((registration) => registration.update?.())
+              })
+            } else {
+              navigator.serviceWorker.getRegistrations().then((registrations) => {
+                registrations.forEach((registration) => registration.unregister())
+              })
             }
-            
-            // Web Vitals monitoring
-            function getCLS(onReport) {
-              new PerformanceObserver((entryList) => {
-                for (const entry of entryList.getEntries()) {
-                  if (!entry.hadRecentInput) {
-                    onReport(entry.value);
-                  }
+          }
+
+          function getCLS(onReport) {
+            new PerformanceObserver((entryList) => {
+              for (const entry of entryList.getEntries()) {
+                if (!entry.hadRecentInput) {
+                  onReport(entry.value);
                 }
-              }).observe({type: 'layout-shift', buffered: true});
-            }
-            
-            // Track Core Web Vitals for SEO
-            getCLS(console.log);
-          `,
-        }}
-      />
-    </Head>
+              }
+            }).observe({type: 'layout-shift', buffered: true});
+          }
+
+          getCLS(console.log);
+        `}
+      </Script>
+    </>
   )
 }
 

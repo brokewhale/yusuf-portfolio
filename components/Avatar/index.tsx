@@ -1,4 +1,5 @@
-import { Box, SkeletonCircle, useColorModeValue } from '@chakra-ui/react'
+import { Box, SkeletonCircle } from '@chakra-ui/react'
+import useColorModeValue from 'hooks/useColorModeValue'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { memo, useEffect, useMemo } from 'react'

@@ -10,8 +10,8 @@ import {
   Button,
   Container,
   Stack,
-  useColorModeValue,
 } from '@chakra-ui/react'
+import useColorModeValue from 'hooks/useColorModeValue'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import styles from './styles.module.css'
@@ -37,7 +37,7 @@ const variants = {
     opacity: 1,
     transition: {
       duration: DURATIONS.Fast,
-      ease: 'backOut',
+      ease: easing,
     },
   },
   tap: {

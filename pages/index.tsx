@@ -1,4 +1,5 @@
 import { Grid, GridItem, Stack, Box } from '@chakra-ui/react'
+import type { ReactElement } from 'react'
 import dynamic from 'next/dynamic'
 import OpenGraphHead from 'components/Misc/OpenGraphHead'
 import Section from 'components/Layout/Section'
@@ -20,7 +21,7 @@ interface PortfolioProps {
   articles: Article[]
 }
 
-const Portfolio = ({ articles }: PortfolioProps): JSX.Element => {
+const Portfolio = ({ articles }: PortfolioProps): ReactElement => {
   const { sideBarPadding, mainContentPadding, paddingTop } =
     useCommonBreakpoints()
 
