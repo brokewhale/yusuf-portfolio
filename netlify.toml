@@ -1,10 +1,9 @@
 [build]
-  command = "yarn build"
+  command = "npm run build"
   publish = "out"
 
 [build.environment]
-  NODE_VERSION = "18.20.4"
-  NPM_FLAGS = "--legacy-peer-deps"
+  NODE_VERSION = "20.18.0"
 
 # Redirect rules for SPA
 [[redirects]]
