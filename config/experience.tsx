@@ -2,6 +2,7 @@ import { Link, Text, Tooltip } from '@chakra-ui/react'
 import { ReactNode } from 'react'
 
 export type Company =
+  | 'Optimism'
   | 'Polygon'
   | 'IQ.wiki'
   | 'Contribution Labs'
@@ -25,6 +26,55 @@ export type CompanyDetail = {
 export const Experiences: {
   [key in Company]: CompanyDetail
 } = {
+  Optimism: {
+    name: 'Optimism',
+    longName: 'OP Labs (Optimism)',
+    subDetail: 'Layer 2 Infrastructure · Remote',
+    url: 'https://optimism.io/',
+    position: 'Developer Support Engineer',
+    duration: 'Apr 2024 - Present',
+    logo: {
+      light: '/worked_at_logos/optimism/op_dark.svg',
+      dark: '/worked_at_logos/optimism/op_light.svg',
+    },
+    roles: [
+      <>
+        Served as the
+        <Text variant="emphasis" as="span">
+          {' '}
+          technical point of contact{' '}
+        </Text>
+        for OP Stack partner integrations, steering teams from discovery to
+        launch readiness while keeping deployments predictable.
+      </>,
+      <>
+        Partnered closely with
+        <Text variant="emphasis" as="span">
+          {' '}
+          Engineering, Product, and DevRel{' '}
+        </Text>
+        counterparts to resolve blockers, elevate developer tooling, and close
+        documentation gaps.
+      </>,
+      <>
+        Turned developer feedback into prioritized fixes that shaped
+        <Text variant="emphasis" as="span">
+          {' '}
+          product improvements and Superchain roadmap decisions
+        </Text>
+        .
+      </>,
+      <>
+        Produced
+        <Text variant="emphasis" as="span">
+          {' '}
+          tailored demos, runbooks, and enablement assets{' '}
+        </Text>
+        that dramatically reduced onboarding time for new chain operators and
+        app developers.
+      </>,
+    ],
+  },
   Polygon: {
     name: 'Polygon Labs',
     longName: 'Polygon Labs',
@@ -38,8 +88,7 @@ export const Experiences: {
     },
     roles: [
       <>
-        Collaborated with Business Development and Technical Sales in the
-        development of the
+        Teamed with Business Development and Technical Sales to launch the
         <Tooltip
           label="Lead Solutions Engineer responsible for making this a success (click to learn more)"
           aria-label="Clarify"
@@ -55,15 +104,15 @@ export const Experiences: {
             PolygonID ecosystem{' '}
           </Link>
         </Tooltip>
-        from ground up, providing solutions, support, and use-case demos,
-        alongside pre- and post-sale consultations.
+        from the ground up, designing solutions, delivering live demos, and
+        leading pre- and post-sale consultations.
       </>,
       <>
-        Offering support, solutions and technical documentation on blockchain
-        related issues related to Polygon's suite of solutions
+        Delivered Tier 2/3 support, architecture guidance, and technical content
+        across Polygon's portfolio, unblocking partner builds end to end.
       </>,
       <>
-        I collaborated with the documentation team to overhaul the
+        Co-led the documentation refresh of the
         <Link
           variant="primaryLink"
           href="https://0xpolygonid.github.io/tutorials/"
@@ -73,7 +122,7 @@ export const Experiences: {
           {' '}
           outdated{' '}
         </Link>
-        PolygonID documentation, transforming it into a comprehensively
+        PolygonID documentation, transforming it into a comprehensive
         <Link
           variant="primaryLink"
           href="https://devs.polygonid.com/"
@@ -83,19 +132,18 @@ export const Experiences: {
           {' '}
           revised version{' '}
         </Link>
-        . This update significantly simplifies the complexity of the previous
-        documentation, making integration a seamless process
+        that simplified complex workflows and made integration routine.
       </>,
       <>
         Immersed myself in Polygon solutions
         <Text variant="emphasis" as="span">
           <b> (POS, zkEVM, CDK, PolygonID)</b>
         </Text>
-        , delivering solutions and technical support to developers and partners
+        , delivering solutions and technical guidance to developers and partners
         <Text variant="emphasis" as="span">
           <b> (e.g., SAFE, CircleCI, Verida, Flipkart, Guild, etc.)</b>
         </Text>
-        , along with pre- and post-sale consultations.
+        alongside go-to-market support.
       </>,
     ],
   },
@@ -112,7 +160,7 @@ export const Experiences: {
     },
     roles: [
       <>
-        Partnered with cross-functional teams to launch
+        Partnered with product, design, and protocol teams to launch
         <Link
           variant="primaryLink"
           href="https://iq.wik/"
@@ -122,14 +170,13 @@ export const Experiences: {
           {' '}
           IQ.wiki{' '}
         </Link>
-        , the first blockchain-based Wikipedia, establishing new standards in
-        decentralized knowledge sharing.
+        , the first blockchain-native encyclopedia, establishing new standards
+        for decentralized knowledge sharing.
       </>,
       <>
-        Solely spearheaded the Brainies NFT project, managing the lifecycle from
-        Solidity smart contract development to frontend decentralized
-        application (dApp) implementation, showcasing technical versatility and
-        innovation
+        Owned the Brainies NFT initiative end to end—Solidity contracts,
+        metadata pipelines, and the user-facing dApp—showcasing full-stack web3
+        execution.
       </>,
     ],
   },
@@ -146,7 +193,7 @@ export const Experiences: {
     },
     roles: [
       <>
-        Actively collaborated with the Contributions Lab team to accelerate the
+        Collaborated with the Contributions Lab team to accelerate the
         <Link
           variant="primaryLink"
           href="https://mintkudos.xyz/"
@@ -156,12 +203,12 @@ export const Experiences: {
           {' '}
           MintKudos{' '}
         </Link>{' '}
-        app's MVP development, ensuring its readiness for user engagement and
-        real-world application.
+        app's MVP delivery, ensuring it was stable for the initial launch
+        cohort.
       </>,
       <>
-        Enhancing the MintKudos app's codebase to optimize performance,
-        implement best practices, and elevate the overall user experience.
+        Modernized the MintKudos frontend to boost performance, embed best
+        practices, and polish the overall UX.
       </>,
     ],
   },
@@ -178,8 +225,8 @@ export const Experiences: {
     },
     roles: [
       <>
-        Implemented the user interface and integrated the Restful API to display
-        all important data from the dashboard on the{' '}
+        Built the user interface and wired the REST API to surface critical
+        dashboard data on the{' '}
         <Link
           variant="primaryLink"
           href="https://xchange-ng.vercel.app/"
@@ -189,10 +236,10 @@ export const Experiences: {
           {' '}
           xchange website
         </Link>{' '}
-        .
+        , keeping parity with the internal trading console.
       </>,
       <>
-        I worked on integrating the{' '}
+        Developed the{' '}
         <Link
           variant="primaryLink"
           href="https://xchange-ng.vercel.app/"
@@ -202,11 +249,11 @@ export const Experiences: {
           {' '}
           xchange
         </Link>{' '}
-        project dashboard with a PHP-based Restful API.
+        dashboard and PHP-based REST API integration, ensuring reliable payouts
+        for customers.
       </>,
       <>
-        My first major endeavor, which started in early June, was to refactor
-        the
+        Led a sweeping refactor of the
         <Link
           variant="primaryLink"
           href="https://xchange-ng.vercel.app/"
@@ -216,7 +263,7 @@ export const Experiences: {
           {' '}
           xchnage
         </Link>{' '}
-        project codebase into a more modern architectural design approach.
+        codebase into a modern component-driven architecture.
       </>,
     ],
   },
@@ -233,11 +280,11 @@ export const Experiences: {
     },
     roles: [
       <>
-        I was successful in getting the project into production, as well as
-        assisting the marketing team with the launch.
+        Guided the flagship project into production while equipping the
+        marketing team with launch assets and timelines.
       </>,
       <>
-        I worked on integrating the{' '}
+        Integrated the{' '}
         <Link
           variant="primaryLink"
           href="https://www.jufopay.com/"
@@ -246,10 +293,11 @@ export const Experiences: {
         >
           Jufopay website
         </Link>{' '}
-        with the NodeJS Restful API.
+        with the Node.js REST API to keep payment flows consistent across
+        channels.
       </>,
       <>
-        Using React js, I built and implemented the user experience for the
+        Designed and shipped the entire user experience for the
         <Link
           aria-label="Braze"
           href="https://www.jufopay.com/"
@@ -257,13 +305,12 @@ export const Experiences: {
           rel="noreferrer"
         >
           {' '}
-          Jufopay website.
+          Jufopay website
         </Link>{' '}
-        from the ground up.
+        from the ground up using React.
       </>,
       <>
-        My first big assignment after being hired in early October was to assist
-        in the selection of a design for the
+        Led the design-selection process for the refreshed
         <Link
           aria-label="Braze"
           href="https://www.jufopay.com/"
@@ -271,14 +318,16 @@ export const Experiences: {
           rel="noreferrer"
         >
           {' '}
-          Jufopay website.
+          Jufopay website
         </Link>{' '}
+        to ensure brand alignment before implementation.
       </>,
     ],
   },
 }
 
 export const ExperiencesList = [
+  Experiences.Optimism,
   Experiences.Polygon,
   Experiences['IQ.wiki'],
   Experiences['Contribution Labs'],
