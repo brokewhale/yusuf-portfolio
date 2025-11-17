@@ -6,7 +6,6 @@ import {
   Box,
   IconButton,
   useColorMode,
-  useColorModeValue,
   useBreakpointValue,
 } from '@chakra-ui/react'
 import { MoonIcon, SunIcon } from '@chakra-ui/icons'
@@ -16,6 +15,7 @@ import MobileMenu from './toggle'
 import { ThemeMode, mobileBreakpointsMap } from 'config/theme'
 import { easing, menuAnim } from 'config/animations'
 import useScrollDirection, { ScrollDirection } from 'hooks/useScrollDirection'
+import useColorModeValue from 'hooks/useColorModeValue'
 
 const Navigation = () => {
   const { toggleColorMode, colorMode } = useColorMode()
@@ -81,24 +81,25 @@ const Navigation = () => {
               : '3.5%',
         }}
         initial="hide"
-        animate={(!isMobile || isOpen) && 'show'}
+        animate={!isMobile || isOpen ? 'show' : 'hide'}
         style={{
           width:
             !isMobile && scrollDirection === ScrollDirection.Down
               ? '12%'
               : '100%',
-          top: !isOpen && isMobile && '-100vh',
-          opacity: !isOpen && isMobile && '0',
-          left: isOpen && isMobile && 0,
+          top: !isOpen && isMobile ? '-100vh' : undefined,
+          opacity: !isOpen && isMobile ? '0' : undefined,
+          left: isOpen && isMobile ? 0 : undefined,
         }}
-        borderColor={isOpen && isMobile && borderColor}
-        borderBottomWidth={isOpen && isMobile && '1px'}
-        paddingBottom={isOpen && isMobile && '1px'}
-        ease={easing}
+        borderColor={isOpen && isMobile ? borderColor : undefined}
+        borderBottomWidth={isOpen && isMobile ? '1px' : undefined}
+        paddingBottom={isOpen && isMobile ? '1px' : undefined}
+        transition={{ ease: easing }}
         variants={menuAnim}
         marginTop={0}
         paddingTop={1}
         as="nav"
+        suppressHydrationWarning
       >
         <Flex
           justifyContent={{ base: 'center', lg: 'flex-end' }}

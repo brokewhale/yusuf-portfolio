@@ -1,15 +1,12 @@
 import { useEffect } from 'react'
-import {
-  Container,
-  useColorModeValue,
-  useBreakpointValue,
-} from '@chakra-ui/react'
+import { Container, useBreakpointValue } from '@chakra-ui/react'
 import { motion, Variants, useAnimation } from 'framer-motion'
 import Logo from '../Logo'
 import styles from './styles.module.css'
 import Navigation from './Navigation'
 import { mobileBreakpointsMap } from 'config/theme'
 import useScrollDirection, { ScrollDirection } from 'hooks/useScrollDirection'
+import useColorModeValue from 'hooks/useColorModeValue'
 
 const mobileMenuVariants: Variants = {
   hidden: {

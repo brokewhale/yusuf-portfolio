@@ -13,7 +13,6 @@ import {
   ListItem,
   SlideFade,
   Skeleton,
-  useColorModeValue,
   useBreakpointValue,
   useColorMode,
 } from '@chakra-ui/react'
@@ -21,6 +20,7 @@ import { BiRightArrow } from 'react-icons/bi'
 import styles from './styles.module.css'
 import { ExperiencesList } from 'config/experience'
 import { mobileBreakpointsMap } from 'config/theme'
+import useColorModeValue from 'hooks/useColorModeValue'
 
 const ExperienceTab = () => {
   const { colorMode } = useColorMode()

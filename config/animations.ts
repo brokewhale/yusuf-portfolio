@@ -1,3 +1,5 @@
+import { cubicBezier } from 'framer-motion'
+
 const DURATIONS = {
   VeryFast: 0.3,
   Fast: 0.6,
@@ -5,7 +7,7 @@ const DURATIONS = {
   Slow: 1.2,
   VerySlow: 1.8,
 }
-const easing = [0.6, -0.05, 0.01, 0.99]
+const easing = cubicBezier(0.6, -0.05, 0.01, 0.99)
 
 const fadeInUp = {
   initial: {

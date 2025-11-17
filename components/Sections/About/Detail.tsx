@@ -13,7 +13,7 @@ import {
 import {
   SiJavascript,
   SiTypescript,
-  SiAmazonaws,
+  SiAmazonwebservices,
   SiReact,
   SiNextdotjs,
   SiNodedotjs,
@@ -96,7 +96,11 @@ const Detail = ({ onOpen }: SkillSetModalProps) => {
         </List>
         <List spacing={3}>
           <ListItem fontSize="small" display="flex" alignItems="center">
-            <ListIcon as={SiAmazonaws} color={emphasis} fontSize="1.8em" />
+            <ListIcon
+              as={SiAmazonwebservices}
+              color={emphasis}
+              fontSize="1.8em"
+            />
             AWS
           </ListItem>
           <ListItem fontSize="small" display="flex" alignItems="center">

@@ -57,7 +57,7 @@ const Sidebar = () => {
         <MotionStack variants={stagger} spacing={6} w="100">
           <MotionText
             variants={fadeInUp}
-            delay={1}
+            transition={{ delay: 1 }}
             variant="accent"
             fontWeight="light"
           >
@@ -127,25 +127,24 @@ const Sidebar = () => {
             I turn tech challenges into simple solutions. Ready to collaborate
             and innovate in the digital world.
           </MotionText>
-          <MotionButton
-            size="lg"
-            variant="outline"
-            borderWidth="1px"
-            borderRadius="0"
-            fontWeight="normal"
-            fontSize="sm"
-            width="120px"
-            variants={simpleOpacity}
-            as={'a'}
-            href="mailto:yusufkehinde11@gmail.com"
-            target="_blank"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            Get in touch!
-          </MotionButton>
+          <Link href="mailto:yusufkehinde11@gmail.com" target="_blank" rel="noreferrer">
+            <MotionButton
+              size="lg"
+              variant="outline"
+              borderWidth="1px"
+              borderRadius="0"
+              fontWeight="normal"
+              fontSize="sm"
+              width="120px"
+              variants={simpleOpacity}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              Get in touch!
+            </MotionButton>
+          </Link>
 
-          <MotionBox d="flex" variants={simpleOpacity}>
+          <MotionBox display="flex" variants={simpleOpacity}>
             {SocialMedias.map((socMedia) => (
               <Link
                 variant="description"

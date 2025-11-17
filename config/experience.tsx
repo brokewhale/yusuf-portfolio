@@ -1,4 +1,5 @@
 import { Link, Text, Tooltip } from '@chakra-ui/react'
+import { ReactNode } from 'react'
 
 export type Company =
   | 'Polygon'
@@ -18,7 +19,7 @@ export type CompanyDetail = {
     light: string
     dark?: string
   }
-  roles?: JSX.Element[]
+  roles?: ReactNode[]
 }
 
 export const Experiences: {

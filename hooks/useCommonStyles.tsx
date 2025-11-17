@@ -1,4 +1,5 @@
-import { useColorModeValue, useBreakpointValue } from '@chakra-ui/react'
+import { useBreakpointValue } from '@chakra-ui/react'
+import useColorModeValue from './useColorModeValue'
 
 /**
  * Custom hook for commonly used color schemes across components

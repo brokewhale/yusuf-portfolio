@@ -15,14 +15,14 @@ import {
   SiFramer,
   SiGit,
   SiGnubash,
-  SiVisualstudiocode,
+  SiVscodium,
   SiTailwindcss,
   SiGithub,
   SiArchlinux,
   SiExpress,
   SiNetlify,
   SiVercel,
-  SiAmazonaws,
+  SiAmazonwebservices,
   SiGooglecloud,
   SiPostgresql,
   SiGo,
@@ -124,7 +124,7 @@ export const Skills: {
   cloud: [
     {
       name: 'AWS',
-      icon: SiAmazonaws,
+      icon: SiAmazonwebservices,
     },
     {
       name: 'Google Cloud',
@@ -184,7 +184,7 @@ export const Skills: {
   'productivity boost': [
     {
       name: 'VSCode',
-      icon: SiVisualstudiocode,
+      icon: SiVscodium,
     },
     {
       name: 'Git',
